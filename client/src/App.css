@@ -1,0 +1,166 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.App-header {
+  padding: 2rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.goal-input {
+  padding: 0.8rem;
+  width: 300px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 1rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goal-input:focus {
+  outline: none;
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #ff4a3d;
+  transform: scale(1.1);
+}
+
+.roadmap-container {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  animation: slideUp 1s ease-out;
+}
+
+.roadmap-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.roadmap-container ol {
+  list-style: none;
+  padding: 0;
+}
+
+.roadmap-container li {
+  margin: 0.8rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center; /* Ensures text aligns vertically with the checkbox */
+  gap: 1rem; /* Adds space between the checkbox and text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.roadmap-container li:hover {
+  transform: scale(1.03);
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.roadmap-container input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  accent-color: #ff6f61; /* Modern browsers support this for checkbox color */
+  flex-shrink: 0; /* Prevents the checkbox from shrinking */
+}
+
+.roadmap-container span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  flex-grow: 1; /* Ensures the text takes up remaining space */
+}
+
+.roadmap-container span.completed {
+  color: #d1d1d1;
+  text-decoration: line-through;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subtask-list {
+  list-style: none;
+  padding-left: 2rem; /* Indent subtasks */
+  margin-top: 0.5rem;
+}
+
+.subtask-list li {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subtask-list input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #ff6f61;
+}
+
+.subtask-list span {
+  font-size: 0.9rem;
+  color: white;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.subtask-list span.completed {
+  color: #d1d1d1;
+  text-decoration: line-through;
+}
